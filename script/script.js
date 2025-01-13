@@ -19,12 +19,12 @@ $('#fullpage').fullpage({
     'secondPage',
     'skillPage',
     'archivingPage',
-    'thirdPage',
-    'fourthPage',
-    'fifthPage',
-    'sixthPage',
-    'seventhPage',
-    'eighthPage',
+    'projectPage',
+    'project2Page',
+    'project3Page',
+    'project4Page',
+    'project5Page',
+    'contactPage'
   ],
   menu: '#myMenu',
   autoScrolling: true,
@@ -126,8 +126,8 @@ let main = document.querySelector('#myMenu > li:nth-child(5)');
 let sub = document.querySelector('#myMenu .sub');
 
 main.addEventListener('mouseover', function () {
-  sub.style.transition = '.4s';
-  sub.style.height = '152px';
+  sub.style.transition = '.4s';   
+  sub.style.height = '190px';     // 메뉴 클릭 시 확장되는 높이(높이를 늘려줌)
 });
 main.addEventListener('mouseout', function () {
   sub.style.transition = 'none';

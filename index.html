@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./css/design.css" />
     <link rel="stylesheet" href="./css/animation.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
   <body>
     <div id="load"><img src="img/logo.svg" alt="loading" /></div>
@@ -39,32 +40,37 @@
         <li data-menuanchor="firstPage" class="active">
           <a href="#firstPage">INTRO</a>
         </li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">ABOUT</a></li>
-        <li data-menuanchor="skillPage"><a href="#skillPage">SKILL</a></li>
-        <li data-menuanchor="archivingPage"><a href="#archivingPage">ARCHIVING</a></li>
-        <li data-menuanchor="thirdPage">
-          <a href="#thirdPage"
-            >PROJECT<span class="mobile_skip"> LIST</span></a
-          >
+        <li data-menuanchor="secondPage">
+          <a href="#secondPage">ABOUT</a>
+        </li>
+        <li data-menuanchor="skillPage">
+          <a href="#skillPage">SKILL</a>
+        </li>
+        <li data-menuanchor="archivingPage">
+          <a href="#archivingPage">ARCHIVING</a>
+        </li>
+        <li data-menuanchor="projectPage">
+          <a href="#projectPage">PROJECT<span class="mobile_skip"> LIST</span></a>
           <ul class="sub">
-            <li data-menuanchor="thirdPage">
-              <a href="#thirdPage">PORT VOL.01</a>
+            <li data-menuanchor="projectPage">
+              <a href="#projectPage">PORT VOL.01</a>
             </li>
-            <li data-menuanchor="fourthPage">
-              <a href="#fourthPage">PORT VOL.02</a>
+            <li data-menuanchor="project2Page">
+              <a href="#project2Page">PORT VOL.02</a>
             </li>
-            <li data-menuanchor="fifthPage">
-              <a href="#fifthPage">PORT VOL.03</a>
+            <li data-menuanchor="project3Page">
+              <a href="#project3Page">PORT VOL.03</a>
             </li>
-            <li data-menuanchor="sixthPage">
-              <a href="#sixthPage">PORT VOL.04</a>
+            <li data-menuanchor="project4Page">
+              <a href="#project4Page">PORT VOL.04</a>
+            </li>
+            <li data-menuanchor="project5Page">
+              <a href="#project5Page">PORT VOL.05</a>
             </li>
           </ul>
         </li>
-        <li data-menuanchor="seventhPage">
-          <a href="#seventhPage"
-            ><span class="mobile_skip"> CONTACT</span></a
-          >
+        <li data-menuanchor="contactPage">
+          <a href="#contactPage"><span class="mobile_skip">CONTACT</span></a>
         </li>
       </ul>
     </header>
@@ -276,7 +282,7 @@
           <div class="mockup_all">
             <div class="mockup desktop">
               <p class="screenshot">
-                <img src="img/jalangi.png" alt="jalangi" />
+                <img src="img/CTF_Matrix.png" alt="jalangi" />
               </p>
               <p class="frame"></p>
             </div>
@@ -313,7 +319,10 @@
               </li>
             </ul>
             <div class="link">
-              <a href="[GitHub 주소]" target="_blank">GitHub</a>
+              <a href="[GitHub 주소]" target="_blank">
+                <i class="fab fa-github"></i> GitHub</a>
+              <a href="[문서 주소]" target="_blank" style="margin-left: 20px;">
+                <i class="fas fa-file-alt"></i> Document</a>
             </div>
           </div>
         </div>
@@ -325,7 +334,7 @@
           <div class="mockup_all">
             <div class="mockup desktop">
               <p class="screenshot" style="top:15%;">
-                <img src="./img/mztest.png" alt="mz테스트" style="width: 60%;" />
+                <img src="./img/mztest.png" alt="모의해킹" style="width: 60%;" />
               </p>
               <p class="frame"></p>
             </div>
@@ -333,37 +342,42 @@
           <div class="info">
             <div class="title">
               <h1>PORT VOL.02</h1>
-              <p class="description">[세대 간의 통합을 위한, MZ 레벨 테스트]
-              </p>
+              <p class="description">[웹 애플리케이션 모의해킹 프로젝트]</p>
             </div>
             <ul>
               <li>
                 <span>TYPE</span>
-                <span>Web Project</span>
+                <span>Web Application Penetration Testing</span>
               </li>
               <li>
-                <span>LANGUAGE</span>
-                <span>JavaScript, HTML, CSS
-                </span>
+                <span>TARGET</span>
+                <span>DVWA (Damn Vulnerable Web Application)</span>
               </li>
               <li>
-                <span>TOOL</span>
-                <span>Visual Studio Code, Figma, GitHub, Notion
-                </span>
+                <span>TOOLS</span>
+                <span>Burp Suite Pro, OWASP ZAP, Nmap, Metasploit</span>
+              </li>
+              <li>
+                <span>METHODOLOGY</span>
+                <span>OWASP Testing Guide v4.0</span>
+              </li>
+              <li>
+                <span>FINDINGS</span>
+                <span>SQL Injection, XSS, File Upload 취약점 등 10개 취약점 발견</span>
               </li>
               <li>
                 <span>PERIOD</span>
-                <span>2023/02/16 ~ 2023/02/26
-                </span>
+                <span>2024/01/15 ~ 2024/02/15</span>
               </li>
             </ul>
             <div class="link">
-              <a href="[주소]" target="_blank">Website</a>
+              <a href="[취약점 분석 보고서 주소]" target="_blank">
+                <i class="fas fa-file-alt"></i> Report</a>
+              <a href="[POC 코드 GitHub 주소]" target="_blank" style="margin-left: 20px;">
+                <i class="fab fa-github"></i> POC Code</a>
             </div>
           </div>
-          <!-- e:info -->
         </div>
-        <!-- e:contents -->
         <div class="bg_circle"></div>
       </div>
       <!-- e:mac -->
@@ -372,7 +386,7 @@
           <div class="mockup_all desktop_only">
             <div class="mockup desktop">
               <p class="screenshot">
-                <img src="img/coffee.png" alt="오늘의커피" />
+                <img src="img/coffee.png" alt="네트워크보안" />
               </p>
               <p class="frame"></p>
             </div>
@@ -380,41 +394,36 @@
           <div class="info">
             <div class="title">
               <h1>PORT VOL.03</h1>
-              <p class="description">
-                [개인 취향에 따른 원두 추천 사이트, 오늘의 커피]
-              </p>
+              <p class="description">[네트워크 침투 테스트 및 보안 강화 프로젝트]</p>
             </div>
             <ul>
               <li>
                 <span>TYPE</span>
-                <span>Web Project</span>
+                <span>Network Security Assessment</span>
               </li>
               <li>
-                <span>LANGUAGE</span>
-                <span>JavaScript, HTML, CSS
-                </span>
+                <span>SCOPE</span>
+                <span>내부 네트워크 인프라 취약점 진단</span>
               </li>
               <li>
-                <span>TOOL</span>
-                <span>Visual Studio Code
-                </span>
+                <span>TOOLS</span>
+                <span>Nmap, Wireshark, Nessus, Metasploit Framework</span>
+              </li>
+              <li>
+                <span>ACHIEVEMENTS</span>
+                <span>네트워크 취약점 진단 및 보안 아키텍처 개선안 도출</span>
               </li>
               <li>
                 <span>PERIOD</span>
-                <span>2022/02/09~2022/02/25
-                </span>
+                <span>2024/02/20 ~ 2024/03/20</span>
               </li>
             </ul>
             <div class="link">
-              <a href="[주소]
-              " target="_blank"
-                >Website</a
-              >
+              <a href="[보안성 평가 보고서]" target="_blank">
+                <i class="fas fa-file-alt"></i> Security Report</a>
             </div>
           </div>
-          
         </div>
-        <!-- e:contents -->
         <div class="bg_circle"></div>
       </div>
       <!-- e:samapharm -->
@@ -423,7 +432,7 @@
           <div class="mockup_all">
             <div class="mockup desktop">
               <p class="screenshot">
-                <img src="img/oracle.png" alt="oracle" />
+                <img src="img/oracle.png" alt="보안관제" />
               </p>
               <p class="frame"></p>
             </div>
@@ -431,41 +440,80 @@
           <div class="info">
             <div class="title">
               <h1>PORT VOL.04</h1>
-              <p class="description">
-                [효율적인 학원 운영을 위한, 관리시스템 DB 구현]
-
-              </p>
+              <p class="description">[보안 관제 시스템 구축 프로젝트]</p>
             </div>
             <ul>
               <li>
                 <span>TYPE</span>
-                <span>DB(Oracle) Project</span>
+                <span>Security Operation Center (SOC) Implementation</span>
               </li>
               <li>
-                <span>LANGUAGE</span>
-                <span>Oracle Database 11g
-                </span>
+                <span>COMPONENTS</span>
+                <span>SIEM, IDS/IPS, Firewall, Anti-DDoS</span>
               </li>
               <li>
-                <span>TOOL</span>
-                <span>SQL Developer, DBeaver, eXERD, Draw.io
-
-                </span>
+                <span>TOOLS</span>
+                <span>Splunk Enterprise Security, ELK Stack, Snort</span>
+              </li>
+              <li>
+                <span>FEATURES</span>
+                <span>실시간 위협 탐지, 로그 분석, 인시던트 대응</span>
               </li>
               <li>
                 <span>PERIOD</span>
-                <span>2023/09/11~2023/09/18
-
-                </span>
+                <span>2024/03/25 ~ 2024/04/25</span>
               </li>
             </ul>
             <div class="link">
-              <a
-                href="[주소]
-                "
-                target="_blank"
-                >GitHub</a
-              >
+              <a href="[구축 문서]" target="_blank">
+                <i class="fas fa-file-alt"></i> Documentation</a>
+            </div>
+          </div>
+        </div>
+        <!-- e:contents -->
+        <div class="bg_circle"></div>
+      </div>
+      <!-- e:mac -->
+      <div id="seoulmilk" class="section web_section">
+        <div class="contents">
+          <div class="mockup_all desktop_only">
+            <div class="mockup desktop">
+              <p class="screenshot">
+                <img src="img/coffee.png" alt="악성코드분석" />
+              </p>
+              <p class="frame"></p>
+            </div>
+          </div>
+          <div class="info">
+            <div class="title">
+              <h1>PORT VOL.05</h1>
+              <p class="description">[악성코드 분석 및 대응 프로젝트]</p>
+            </div>
+            <ul>
+              <li>
+                <span>TYPE</span>
+                <span>Malware Analysis & Incident Response</span>
+              </li>
+              <li>
+                <span>TARGET</span>
+                <span>랜섬웨어 및 APT 공격 분석</span>
+              </li>
+              <li>
+                <span>TOOLS</span>
+                <span>IDA Pro, x64dbg, Process Monitor, Volatility</span>
+              </li>
+              <li>
+                <span>ANALYSIS</span>
+                <span>정적/동적 분석, 메모리 포렌식, 행위 분석</span>
+              </li>
+              <li>
+                <span>PERIOD</span>
+                <span>2024/05/01 ~ 2024/05/30</span>
+              </li>
+            </ul>
+            <div class="link">
+              <a href="[분석 보고서]" target="_blank">
+                <i class="fas fa-file-alt"></i> Analysis Report</a>
             </div>
           </div>
         </div>
