@@ -528,19 +528,24 @@ about
 #skill .skills {
   margin: 0 auto;
   display: flex;
-  flex-flow: row;
-  justify-content: space-around;
+  flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
   max-width: 1400px;
+  gap: 15px;
+  padding: 0 20px;
+  width: 100%;
 }
 
 #skill .skill-wrap {
+  flex: 1;
+  min-width: 0;
+  width: 25%;
   display: flex;
   flex-direction: column;
   background-color: var(--card-bg);
   border-radius: 20px;
-  padding: 24px;
-  margin: 20px;
+  padding: 15px;
   border: 1px solid var(--border-color);
 }
 
@@ -554,7 +559,9 @@ about
 }
 
 #skill .skill-wrap img {
-  width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 #skill .skill-col {
@@ -1298,6 +1305,25 @@ strong.highlight-text {
   50% {
     opacity: 0.8;
     transform: scale(1);
+  }
+}
+
+/* 반응형 미디어 쿼리 추가 */
+@media screen and (max-width: 1200px) {
+  #skill .skills {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #skill .skills {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #skill .skills {
+    transform: scale(0.7);
   }
 }
 
