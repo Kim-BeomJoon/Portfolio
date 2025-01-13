@@ -544,10 +544,10 @@ about
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--card-bg);
+  background: none;  /* var(--card-bg)에서 none으로 변경 */
   border-radius: 20px;
   padding: 15px 0;
-  border: 1px solid var(--border-color);
+  border: none;      /* 1px solid var(--border-color)에서 none으로 변경 */
   margin: 0 auto;
 }
 
