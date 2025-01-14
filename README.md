@@ -14,13 +14,13 @@
 ├── css/
 │   ├── design.css      # 메인 스타일시트
 │   ├── responsive.css  # 반응형 디자인
-│   ├── reset.css      # CSS 초기화
-│   └── fullpage.css   # fullPage.js 스타일
+│   ├── reset.css       # CSS 초기화
+│   └── fullpage.css    # fullPage.js 스타일
 ├── js/
-│   └── fullpage.js    # fullPage.js 라이브러리
+│   └── fullpage.js     # fullPage.js 라이브러리
 ├── script/
-│   └── script.js      # 사용자 정의 스크립트
-└── index.html         # 메인 페이지
+│   └── script.js       # 사용자 정의 스크립트
+└── index.html          # 메인 페이지
 ```
 
 
