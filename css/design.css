@@ -1332,3 +1332,137 @@ strong.highlight-text {
   }
 }
 
+/* Detail View Modal Styles */
+.detail-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 34, 64, 0.95);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 90%;
+  margin: 2% auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1002;
+  transition: transform 0.3s ease;
+}
+
+.close-modal:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-bottom: 50px; /* 하단 네비게이션을 위한 여백 */
+  position: relative;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.modal-image {
+  width: auto;
+  height: auto;
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+}
+
+.navigation-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 15px 0;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.nav-btn:hover {
+  transform: scale(1.2);
+}
+
+.image-counter {
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 14px;
+}
+
+/* Detail View Button Style */
+.detail-view-btn {
+  background: none;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  color: inherit;
+  font-family: 'Montserrat';
+  transition: 0.3s;
+}
+
+.detail-view-btn:hover {
+  background-color: var(--color-seoulmilk);
+  border-color: var(--color-seoulmilk);
+  color: #fff !important;
+}
+
+/* 반응형 스타일 추가 */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    height: 95%;
+    padding: 10px;
+  }
+
+  .nav-btn {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .modal-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+

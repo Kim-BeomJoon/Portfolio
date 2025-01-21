@@ -203,3 +203,81 @@ modal_popup_bg.forEach(function (target, index) {
     cursor.classList.remove('active');
   });
 });
+
+// Detail View Modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const projectImages = {
+    project1: [
+      'img/project1/Logo.png',
+      'img/project1/detail2.jpg',
+      'img/project1/detail3.jpg'
+    ],
+    project2: [
+      'img/project2/detail1.jpg',
+      'img/project2/detail2.jpg',
+      'img/project2/detail3.jpg'
+    ],
+    // ... 다른 프로젝트 이미지들
+  };
+  
+  let currentImages = [];
+  let currentImageIndex = 0;
+  
+  const modal = document.querySelector('.detail-modal');
+  const modalImage = document.querySelector('.modal-image');
+  const closeBtn = document.querySelector('.close-modal');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  const imageCounter = document.querySelector('.image-counter');
+  
+  // Open modal
+  document.querySelectorAll('.detail-view-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const projectId = this.dataset.project;
+      currentImages = projectImages[projectId];
+      currentImageIndex = 0;
+      modal.style.display = 'block';
+      updateImage();
+    });
+  });
+  
+  // Close modal
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  
+  // Close on outside click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+  
+  // Previous image
+  prevBtn.addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+    updateImage();
+  });
+  
+  // Next image
+  nextBtn.addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+    updateImage();
+  });
+  
+  // Update image and counter
+  function updateImage() {
+    modalImage.src = currentImages[currentImageIndex];
+    imageCounter.textContent = `${currentImageIndex + 1} / ${currentImages.length}`;
+  }
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (modal.style.display === 'block') {
+      if (e.key === 'ArrowLeft') prevBtn.click();
+      if (e.key === 'ArrowRight') nextBtn.click();
+      if (e.key === 'Escape') closeBtn.click();
+    }
+  });
+});
