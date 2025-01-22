@@ -650,9 +650,9 @@ about
 /* web */
 
 .web_section {
-  --afterWidth: 100%;
-  --afterHeight: 70%;
-  --afterBg: #ffffffcc;
+  --afterWidth: 110%;
+  --afterHeight: 85%;
+  --afterBg: rgba(40, 40, 40, 0.95);  /* 훨씬 더 어두운 색상으로 변경 */
 }
 .web_section::after {
   display: block;
@@ -666,14 +666,17 @@ about
   width: var(--afterWidth);
   height: var(--afterHeight);
   background: var(--afterBg);
+  backdrop-filter: brightness(0.7) contrast(1.1);  /* 더 어둡게 조정하고 대비 증가 */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);  /* 미세한 테두리 추가 */
 }
 .web_section .contents {
   /* background:firebrick; */
-  width: min(100%, 1400px);
+  width: min(100%, 1800px);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 40px;  /* mockup과 info 사이 간격 줄임 */
   margin: 0 auto;
   padding: 0 60px;
   z-index: 1;
@@ -681,11 +684,9 @@ about
 .web_section .contents .mockup_all {
   transition: 0.5s;
   display: flex;
-  width: 600px;
+  width: 700px;  /* mockup 영역 확장 */
   position: relative;
   z-index: 1;
-  margin-right: 60px;
-  transform: scale(0.8);
 }
 .web_section .contents .mockup_all.scrollOn {
   transform: scale(1);
@@ -765,19 +766,54 @@ about
   background-image: url(../images/mockup_mobile.png);
 }
 .web_section .contents .info {
-  /* background:seagreen; */
   transition: 0.5s;
   z-index: 1;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 20px;
   opacity: 0;
   transform: translateY(20%);
-  width: 400px;
+  width: 600px;  /* info 영역 너비 줄임 */
+  padding: 10px 0;
+  color: #ffffff;  /* 기본 텍스트 색상 */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);  /* 모든 텍스트에 그림자 추가 */
 }
 .web_section .contents .info.scrollOn {
   opacity: 1;
   transform: translateY(0);
+}
+
+.web_section .contents .info .title {
+  margin-bottom: 20px;  /* 제목 하단 여백 축소 */
+}
+
+.web_section .contents .info ul {
+  margin: 15px 0;  /* 리스트 상하 여백 축소 */
+}
+
+.web_section .contents .info ul li {
+  padding: 8px 0;  /* 항목 간 간격 줄임 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);  /* 모든 구분선 통일 */
+}
+
+.web_section .contents .info ul li:last-child {
+  border-bottom: none;  /* 마지막 항목 구분선 제거 */
+}
+
+.web_section .contents .info ul li span {
+  margin-right: 20px;  /* 레이블과 내용 사이 간격 */
+  line-height: 1.6;  /* 줄 간격 */
+}
+
+.web_section .contents .info .link {
+  margin-top: 20px;  /* 버튼 영역 상단 여백 줄임 */
+}
+
+.web_section .contents .info .link a {
+  padding: 10px 20px;  /* 버튼 내부 여백 */
+  margin-right: 15px;  /* 버튼 사이 간격 */
+}
+
+.web_section .contents .info .link a i {
+  margin-right: 8px;  /* 아이콘과 텍스트 사이 간격 */
+  vertical-align: middle;  /* 아이콘 수직 정렬 */
 }
 
 .web_section .contents .info .title h1 {
@@ -853,13 +889,13 @@ about
   border-radius: 1500px;
   z-index: 0;
   transition: 1s ease-out;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .web_section .bg_circle.active {
   border-radius: 0px;
   width: max(200vw, 200vh);
   height: max(200vw, 200vh);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /*
@@ -877,7 +913,7 @@ web
   border-color: var(--color-mac);
 }
 #mac .bg_circle {
-  background-image: linear-gradient(150deg, rgb(110 5 5) 35%, rgb(0, 0, 0) 65%);
+  background-image: linear-gradient(150deg, rgb(80 5 5) 35%, rgb(0, 0, 0) 65%);
 }
 #seoulmilk {
   color: var(--color-seoulmilk);
@@ -890,11 +926,7 @@ web
   border-color: var(--color-seoulmilk);
 }
 #seoulmilk .bg_circle {
-  background-image: linear-gradient(
-    150deg,
-    rgb(101 129 106) 35%,
-    rgb(193 193 193) 65%
-  );
+  background-image: linear-gradient(150deg, rgb(45 57 47) 35%, rgb(70 70 70) 65%);
 }
 #samapharm {
   color: var(--color-samapharm);
@@ -907,7 +939,7 @@ web
   border-color: var(--color-samapharm);
 }
 #samapharm .bg_circle {
-  background-image: linear-gradient(150deg, rgb(9 39 66) 35%, rgb(0, 0, 0) 65%);
+  background-image: linear-gradient(150deg, rgb(7 29 49) 35%, rgb(0, 0, 0) 65%);
 }
 #watchapedia {
   color: var(--color-watchapedia);
@@ -920,11 +952,7 @@ web
   border-color: var(--color-watchapedia);
 }
 #watchapedia .bg_circle {
-  background-image: linear-gradient(
-    150deg,
-    rgb(223 170 188) 35%,
-    rgb(220 220 220) 65%
-  );
+  background-image: linear-gradient(150deg, rgb(120 5 30) 35%, rgb(0, 0, 0) 65%);
 }
 /* 
 clone, graphic section
